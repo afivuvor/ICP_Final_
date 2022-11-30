@@ -1,5 +1,5 @@
 //
-// Created by Wepea Buntugu on 23/11/2022.
+// Created by Sena Vuvor on 23/11/2022.
 //
 #include <iostream>
 #include <fstream>
