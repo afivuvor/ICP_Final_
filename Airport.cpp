@@ -23,18 +23,19 @@ public:
 
     /* Method declarations */
     string toString();
+   
     string getAirportID();
     void setAirportID(string AirportID);
-    void setIATA(string IATA);
-    string getIATA() ;
-    void setICAO(string ICAO);
-    string getICAO() ;
-    string getAirportCity();
-    void setAirportCity(string airportCity);
     string getAirportName();
     void setAirportName(string airportName);
+    string getAirportCity();
+    void setAirportCity(string airportCity);
     string getCountry();
-    void setCountry(string country);
+    void setCountry(string country); 
+    string getIATA() ;
+    void setIATA(string IATA);
+    string getICAO();
+    void setICAO(string ICAO);
     double getLongitude();
     void setLongitude(double longitude);
     double getLatitude();
@@ -44,6 +45,16 @@ public:
     Airport getObject(string IATA);
     vector<Airport> getAirport(string source);
 
+    /** Constructor method for Airport class
+     *@param: string airportID;
+     *        string airportName;
+     *        string airportCity;
+     *        string country;
+     *        string IATA;
+     *        string ICAO;
+     *        double longitude;
+    *         double latitude;
+    **/
     Airport(string ID, string name, string city, string country, string IATA, string ICAO, double airlong, double lat) {
         this->airportID = ID;
         this -> airportName = name;
