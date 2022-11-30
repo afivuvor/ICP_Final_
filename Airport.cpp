@@ -7,17 +7,7 @@
 using namespace std;
 
 
-/**
- * Constructor for airport object.
- * @param id The unique id of the airport
- * @param name The name of the airport
- * @param city The city the airport is located in
- * @param country The country the airport is located in
- * @param iataCode The unique IATA code for the airport
- * @param icaoCode The unique ICAO code for the airport
- * @param latitude The latitude at that location
- * @param longitude The longitude at that location
- */
+
 Airport::Airport(string id, string name, string city, string country, string iataCode, string icaoCode, double latitude, double longitude) {
     this->airportID = id;
     this->name = name;

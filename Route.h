@@ -13,7 +13,13 @@ using namespace std;
 
 class Route {
 private:
-    string airlineIata, airlineId, sourceIata, sourceId, destIata, destId, codeshare, equipment, stops;
+    string airlineIata;
+    string airlineId;
+    string sourceIata;
+    string sourceId;
+    string destIata;
+    string destId;
+    string stops;
 
 public:
     static unordered_map<string,vector<Route>> routes;
@@ -29,18 +35,23 @@ public:
           string stops);
     string getAirlineIata();
     string getAirlineId();
-    string getSourceIata();
     string getSourceId();
     string getdestIata();
     string getdestId();
     string getNumStops();
     static bool contains(deque<string> q, string value);
     static bool set_contains(set<string> s, string value);
+
     static vector<string> solutionPath(string destinationIata);
-    static void getFlights(string csvFile);
-    static void findRoute(string csvFile);
+
+    static void getFlights(string file);
+
+    static void findRoute(string file);
+
     static vector<string> search(Airport start, Airport destination);
+
     static double haversine(Airport start, Airport destination);
+
     static void writeToFile(string start, string destination, vector<string> path, vector<string> flightPath, double distance);
 
 };

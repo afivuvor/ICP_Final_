@@ -239,7 +239,7 @@ string Route::getAirlineIata() {
 
 
 /**
- * This function gets the ID of an airline
+ * Gets airline ID
  * @return airline ID
  */
 string Route::getAirlineId() {
@@ -247,24 +247,17 @@ string Route::getAirlineId() {
 }
 
 
-/**
- * This function gets the IATA code of the source airport
- * @return source airport IATA code
- */
-string Route::getSourceIata() {
-    return this->sourceIata;
-}
 
-/**
- * This function gets the ID of the source airport
- * @return source airport ID
+
+/**Returns source airport ID
+ * * @return source airport ID
  */
 string Route::getSourceId() {
     return this->sourceId;
 }
 
 /**
- * This function gets the IATA code of the destination airport
+ * Get the IATA of the airport at the destination
  * @return destination airport IATA code
  */
 string Route::getdestIata() {
@@ -280,15 +273,14 @@ string Route::getdestId() {
 }
 
 /**
- * This functions checks whether a value is found in a deque
- * @param myDeque the deque
+ * @param new_deque the deque
  * @param value the value being checked for
  * @return whether the value is in the deque or not
  */
-bool Route::contains(deque<string> myDeque, string value) {
+bool Route::contains(deque<string> new_deque, string value) {
         deque<string>::iterator itr;
-        itr = find(myDeque.begin(), myDeque.end(), value);
-        if(itr != myDeque.end()) {
+        itr = find(new_deque.begin(), new_deque.end(), value);
+        if(itr != new_deque.end()) {
             return true;
         }
         else
@@ -299,10 +291,7 @@ bool Route::contains(deque<string> myDeque, string value) {
 
 
 /**
- * This function checks whether a set contains a particular value
- * @param s The set
- * @param value The value being checked for
- * @return whether the set contains the value or not
+ * Helper contains function for sets
  */
 bool Route::set_contains(set<string> s, string value) {
     auto pos = s.find(value);
@@ -315,7 +304,6 @@ bool Route::set_contains(set<string> s, string value) {
 }
 
 /**
- * This function reconstructs the path took from the start to the destination
  * @param destinationIata the IATA code of the destination airport
  * @return A vector containing the path taken from start to destination
  */
